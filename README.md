@@ -1,1 +1,1 @@
-# PoC-ComputerVision-Models
+# PoC ComputerVision Models
