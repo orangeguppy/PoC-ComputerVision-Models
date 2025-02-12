@@ -2,7 +2,7 @@
 ## Neural Style Transfer
 Style Transfer outputs can be viewed under the 'Demo Outputs' section.
 ### Model Architecture
-VGG-19 was used as a feature extractor, with pretrained weights from PyTorch.
+VGG-19 was used as a feature extractor, pretrained on IMAGENET.
 
 ### Loss Objective
 The loss consists of 3 components: Content Loss, Style Loss, and Total Variation Loss.
