@@ -21,7 +21,7 @@ Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500, (alpha, beta, tv_lam
 4) After training, denormalise the images and permute tensor dimensions for viewing with MatPlotLib.
 
 ## Demo Outputs
-A description of the procedure and training hyperparameters can be found below this section
+I'm actually happy with these wahahahaha
 ![Lilypads with Monet's style](images/style_transfer_1.png)
 ![Lilypads with Monet's style](images/style_transfer_3.png)
 ![Lilypads with Monet's style](images/style_transfer_2.png)
