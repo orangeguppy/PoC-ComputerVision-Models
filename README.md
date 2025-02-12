@@ -13,9 +13,9 @@ L = \alpha L_{\text{content}} + \beta L_{\text{style}} + \lambda_{\text{tv}} L_{
 #### Content Loss \(L_{\text{content}}\)
 The content loss measures the MSE between feature representations of an image at a given layer \( l \).
 
-\[
+```math
 L_{\text{content}}(\tilde{p}, \tilde{x}, l) = \frac{1}{2} \sum_{i,j} \left( F^l_{ij} - P^l_{ij} \right)^2
-\]
+```
 
 where:
 - \( F^l_{ij} \) represents the feature map of the generated image at layer \( l \).
