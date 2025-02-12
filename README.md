@@ -22,7 +22,7 @@ where:
 - $P^l_{ij}$ represents the feature map of the target image at the same layer.
 - The sum is taken over all spatial locations $(i, j)$ in the feature map.
 
-#### Style Loss
+#### Style Loss $L_{\text{style}}$
 Earlier layers in the CNN are used to compute style loss because they usually capture local patterns, rather than high-level semantic features. Local patterns involve image characteristics like colour distributions, edges, and textures, making them great for extracting style features from.
 
 We use multiple layers for style because different layers at different depths capture different levels of textures and spatial patterns. An important point to note is that the Gram matrices of the feature maps are used in calculating style loss. This is because the Gram matrix gives us the correlations between different feature maps within the same CNN layer. The Gram matrix of a CNN feature map from layer $l$ is
@@ -49,7 +49,11 @@ Hence, the total style loss is defined as
 ```math
 L_{style}(\tilde{a}, \tilde{x})\sum^L_{l=0}w_lE_l
 ```
-where $w_l$ are tunable weighting factors for each layer's contribution, and  
+where $w_l$ are tunable weighting factors for each layer's contribution
+
+#### Total Variation Loss $L_{\text{tv}}$
+I chose to include TV loss to reduce the noise in the output image. 
+
 
 ### Hyperparameters
 Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500, (alpha, beta, tv_lambda): (1e3, 5e6, 1e-6)
