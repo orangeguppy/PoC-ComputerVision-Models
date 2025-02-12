@@ -6,8 +6,7 @@ VGG-19 was used as a feature extractor, pretrained on IMAGENET.
 
 ### Loss Objective
 The loss consists of 3 components: Content Loss, Style Loss, and Total Variation Loss.
-
-More formally defined as:
+$L = \alpha L_{\text{content}} + \beta L_{\text{style}} + \lambda_{\text{tv}} L_{\text{tv}}$
 
 ### Hyperparameters
 Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500, (alpha, beta, tv_lambda): (1e3, 5e6, 1e-6)
@@ -15,7 +14,8 @@ Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500, (alpha, beta, tv_lam
 ### Training Procedure Summary
 1) Instantiate the model and attach hooks at intermediate layers to capture activation maps for computing Content and Style Loss
 2) Forward pass the image through the model. Ensure that gradient tracking is enabled for the image tensor. The generated image is initialised by cloning the original input.
-3) 
+3) Compute the loss (defined earlier) and backpropagate.
+4) After training, denormalise the images and permute tensor dimensions for viewing with MatPlotLib.
 
 ## Demo Outputs
 A description of the procedure and training hyperparameters can be found below this section
