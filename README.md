@@ -40,6 +40,10 @@ The style loss contributed by a single layer is defined as
 E_l = \frac{1}{4 N_l^2 M_l^2} \sum_{i,j} \left( G^l_{ij} - A^l_{ij} \right)^2
 ```
 
+where 
+- $N_l$ is the number of feature maps of size $M_l$ for layer $l$
+- \frac{1}{4 N_l^2 M_l^2} is a normalisation constant to ensure that the feature map's contribution is invariant to scale
+
 Hence, the total style loss is defined as
 
 ```math
