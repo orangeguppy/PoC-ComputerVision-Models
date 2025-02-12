@@ -66,9 +66,11 @@ Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500
 
 ```math
 \alpha: 1e3
-
+```
+```math
 \beta: 5e6
-
+```
+```math
 \lambda_{tv}: 1e-6
 ```
 
