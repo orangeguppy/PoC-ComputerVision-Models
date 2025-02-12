@@ -54,6 +54,9 @@ where $w_l$ are tunable weighting factors for each layer's contribution
 #### Total Variation Loss $L_{\text{tv}}$
 I chose to include TV loss to reduce the noise in the output image. 
 
+```math
+L_{\text{TV}} = \sum_{i,j} \left( (x_{i,j+1} - x_{i,j})^2 + (x_{i+1,j} - x_{i,j})^2 \right)
+```
 
 ### Hyperparameters
 Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500, (alpha, beta, tv_lambda): (1e3, 5e6, 1e-6)
