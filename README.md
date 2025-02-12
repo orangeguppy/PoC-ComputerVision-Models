@@ -11,7 +11,7 @@ The loss consists of 3 components: Content Loss, Style Loss, and Total Variation
 L = \alpha L_{\text{content}} + \beta L_{\text{style}} + \lambda_{\text{tv}} L_{\text{tv}}
 ```
 #### Content Loss $L_{\text{content}}$
-Deeper layers in the CNN are used to compute content loss because deeper layers usually contain semantic features (high number of channels, small feature maps) that provide the high-level structure of the image content. The content loss measures the MSE between feature representations of an image at a given layer \( l \).
+Deeper layers in the CNN are used to compute content loss because deeper layers usually contain semantic features (high number of channels, small feature maps) that provide the high-level structure of the image content. The content loss measures the MSE between feature representations of an image at a layer $l$.
 
 ```math
 L_{\text{content}}(\tilde{p}, \tilde{x}, l) = \frac{1}{2} \sum_{i,j} \left( F^l_{ij} - P^l_{ij} \right)^2
