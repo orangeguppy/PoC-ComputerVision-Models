@@ -1,5 +1,7 @@
 import torchvision
 import torch.nn as nn
+from collections import OrderedDict
+from functools import partial
 
 class VGG19Model(nn.Module):
     def __init__(self):
