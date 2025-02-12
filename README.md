@@ -59,7 +59,13 @@ L_{\text{tv}} = \sum_{i,j}  |x_{i,j} - x_{i+1,j}| + |x_{i,j} - x_{i,j+1}|
 ```
 
 ### Hyperparameters
-Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500, (alpha, beta, tv_lambda): (1e3, 5e6, 1e-6)
+Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500
+
+```math
+\alpha: 1e3
+\beta: 5e6
+\lambda_{tv}: 1e-6
+```
 
 ### Training Procedure Summary
 1) Instantiate the model and attach hooks at intermediate layers to capture activation maps for computing Content and Style Loss
