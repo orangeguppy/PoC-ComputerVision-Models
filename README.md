@@ -18,10 +18,9 @@ L_{\text{content}}(\tilde{p}, \tilde{x}, l) = \frac{1}{2} \sum_{i,j} \left( F^l_
 ```
 
 where:
-- \( F^l_{ij} \) represents the feature map of the generated image at layer \( l \).
-- \( P^l_{ij} \) represents the feature map of the target image at the same layer.
-- The sum is taken over all spatial locations \( (i, j) \) in the feature map.
-
+- $F^l_{ij}$ represents the feature map of the generated image at layer $l$.
+- $P^l_{ij}$ represents the feature map of the target image at the same layer.
+- The sum is taken over all spatial locations $(i, j)$ in the feature map.
 
 ### Hyperparameters
 Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500, (alpha, beta, tv_lambda): (1e3, 5e6, 1e-6)
