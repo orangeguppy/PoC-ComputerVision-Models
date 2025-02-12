@@ -6,7 +6,8 @@ VGG-19 was used as a feature extractor, pretrained on IMAGENET.
 
 ### Loss Objective
 The loss consists of 3 components: Content Loss, Style Loss, and Total Variation Loss.
-$L = \alpha L_{\text{content}} + \beta L_{\text{style}} + \lambda_{\text{tv}} L_{\text{tv}}$
+
+$$L = \alpha L_{\text{content}} + \beta L_{\text{style}} + \lambda_{\text{tv}} L_{\text{tv}}$$
 
 ### Hyperparameters
 Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500, (alpha, beta, tv_lambda): (1e3, 5e6, 1e-6)
