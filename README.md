@@ -1,6 +1,6 @@
 # PoC ComputerVision Models
 ## Neural Style Transfer
-Style Transfer outputs can be viewed under the 'Demo Outputs' section.
+Neural Style Transfer is a deep learning technique that applies the style of an image to the content of another (e.g. in this repo, Monet's painting style to a picture of some lilypads). Style Transfer outputs can be viewed under the 'Demo Outputs' section.
 ### Model Architecture
 VGG-19 was used as a feature extractor, pretrained on IMAGENET.
 
