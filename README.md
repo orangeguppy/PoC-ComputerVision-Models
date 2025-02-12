@@ -34,6 +34,12 @@ G^l_{ij} = \sum_k F^l_{ik} F^l_{jk}
 where
 - $G^l_{ij}$ is the inner product between the vectorised feature maps $i$ and $j$ in layer $l$
 
+Hence, the total style loss is defined as
+
+```math
+L_{style}(\)\sum^L_{l=0}w_lE_l
+```
+
 ### Hyperparameters
 Learning Rate: 0.01, Optimiser: Adam, No. Iterations: 1500, (alpha, beta, tv_lambda): (1e3, 5e6, 1e-6)
 
