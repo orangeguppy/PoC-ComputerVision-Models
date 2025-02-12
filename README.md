@@ -5,12 +5,16 @@ VGG-19 was used as a feature extractor, with pretrained weights from PyTorch.
 
 ### Loss Objective
 The loss consists of 3 components: Content Loss, Style Loss, and Total Variation Loss.
+
 More formally defined as:
 
 ### Hyperparameters
 Learning Rate: 0.01
+
 Optimiser: Adam
-No. Iteratios: 1500
+
+No. Iterations: 1500
+
 alpha, beta, tv_lambda = 1e3, 5e6, 1e-6
 
 ### Training Procedure Summary
