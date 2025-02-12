@@ -10,7 +10,7 @@ The loss consists of 3 components: Content Loss, Style Loss, and Total Variation
 ```math
 L = \alpha L_{\text{content}} + \beta L_{\text{style}} + \lambda_{\text{tv}} L_{\text{tv}}
 ```
-#### Content Loss \(L_{\text{content}}\)
+#### Content Loss $L_{\text{content}}$
 The content loss measures the MSE between feature representations of an image at a given layer \( l \).
 
 ```math
