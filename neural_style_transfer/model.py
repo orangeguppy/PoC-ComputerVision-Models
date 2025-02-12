@@ -1,4 +1,5 @@
 import torchvision
+import torch.nn as nn
 
 class VGG19Model(nn.Module):
     def __init__(self):
