@@ -101,7 +101,7 @@ where
 - $p_z(z)$ is the prior distribution of the input noise
 
 ### Hyperparameters
-Img shape: $1 \times 28 \times 28$, Latent dim: 64
+Img shape: $(1 \times 28 \times 28)$, Latent dim: 64
 
 Disc. channels: [784, 512, 256, 128, 32, 1]
 
