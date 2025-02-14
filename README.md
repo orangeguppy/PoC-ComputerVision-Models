@@ -132,7 +132,7 @@ These images are taken at some time points throughout the training process
 ## StyleGAN
 The basic building block in StyleGAN is a sequence of CNN layer->Noise injection->AdaIN layer
 
-StyleGAN is an extension of GAN. It's novelty lies in the new architecture the authors proposed for the generator:
+StyleGAN is an extension of GAN. Its novelty lies in the new architecture the authors proposed for the generator:
 1. Non-linear Mapping Network $f:Z \rightarrow W$ which maps a latent code $z$ in the input space to $w \in W$ with the same dimensions. The main purpose of the Mapping Network is to disentangle latent features, meaning that attributes of the latent space (e.g. hair feature, glasses features) are more cleanly separated so that each feature can be independently tuned.
 2. Then, through "A" (in diagram), which are learned affine transformations (implemented as single linear layers), $w$ is transformed into parameters $y=(y_s, y_b)$,  used by Adaptive Instance Normalisation (AdaIN) layers to control the strength of features at each layer. AdaIN layers are applied to CNN feature maps after they have been injected with noise.
 ```math
@@ -145,3 +145,12 @@ where each feature map $x_i$ is separately normalised
 5. Finally, in the original StyleGAN, images are generated progressively by starting from low-resolution layers
 
 ### Hyperparameters
+Latent dim: 256
+
+No. channels (feature maps in generator): [256, 128, 64, 32, 1]
+
+Batch size: 64
+
+LR (Generator), LR (Discriminator) = 0.00002, 0.00001
+
+No. epochs: 3
