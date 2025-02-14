@@ -100,6 +100,16 @@ where
 - $p_{\text{data}}(x)$ is the true distribution of real data
 - $p_z(z)$ is the prior distribution of the input noise
 
+### Hyperparameters
+- Img shape:$1 \times 28 \times 28$ 
+- Latent dim: 64
+- Disc. channels: [784, 512, 256, 128, 32, 1]
+- Gen. channels: [64, 128, 256, 512, 784]
+
+- Batch size: 64
+- Lr: 0.002
+- Epochs: 50
+
 ### Training Procedure Summary
 In practice, the discriminator and generator are trained iteratively. D cannot be immediately optimised to completion, because it would cause overfitting. Also, if $D$ performs too well initially, it will
 be difficult for $G$ to learn effectively due to small gradients. For instance, if $D$ is a perfect classifier (assigns 1 for real, 0 for fake), then $log(1−D(G(z)))≈log(1−0)=log1=0$. To improve gradients for $G$, instead of training $G$ to minimise $log(1 − D(G(z)))$, we train it to maximise $log D(G(z))$. 
