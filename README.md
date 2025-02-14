@@ -139,4 +139,5 @@ StyleGAN is an extension of GAN. It's novelty lies in the new architecture the a
 AdaIN(x_i, y) = y_{s,i}\frac{x_i − \mu(x_i)}{\sigma(x_i)}+y_{b,i}
 ```
 where each feature map $x_i$ is separately normalised
+
 3. Noise injection is done via "B", which applies per-channel scaling factors to the noise input
