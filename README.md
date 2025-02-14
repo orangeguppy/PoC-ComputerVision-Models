@@ -104,6 +104,17 @@ where
 In practice, the discriminator and generator are trained iteratively. D cannot be immediately optimised to completion, because it would cause overfitting. Also, if $D$ performs too well initially, it will
 be difficult for $G$ to learn effectively due to small gradients. For instance, if $D$ is a perfect classifier (assigns 1 for real, 0 for fake), then $log(1−D(G(z)))≈log(1−0)=log1=0$. To improve gradients for $G$, instead of training $G$ to minimise $log(1 − D(G(z)))$, we train it to maximise $log D(G(z))$. 
 
+In my implementation, I also train the discriminator and generator iteratively.
+Repeat per epoch:
+1. **Train $D$**  
+   - Sample a batch of real images and label them as $1$
+   - Generate a batch of fake images with $G$ and label them as $0$
+   - Compute $D$'s loss, backprop, and update $D$
+
+2. **Train $G$**
+   - Generate a batch of fake images from noise, label them as $1$ (real) because we want to maximise $log D(G(z))$
+   - Compute $G$'s loss, backprop and update $G$
+
 ## Demo Outputs
 These images are taken at some time points throughout the training process
 ![Intermediate Outputs](images/gan.png)
