@@ -128,4 +128,7 @@ Repeat per epoch:
 These images are taken at some time points throughout the training process
 ![Intermediate Outputs](images/gan.png)
 ![Final Output](images/final_gan.png)
+
 ## StyleGAN
+StyleGAN is an extension of GAN. 
+ 
