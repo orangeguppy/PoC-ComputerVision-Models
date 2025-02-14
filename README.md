@@ -57,7 +57,7 @@ where $w_l$ are tunable weighting factors for each layer's contribution
 #### Total Variation Loss $L_{\text{tv}}$
 I chose to include TV loss to reduce the noise in the output image. 
 
-```math
+```math    
 L_{\text{tv}} = \sum_{i,j}  |x_{i,j} - x_{i+1,j}| + |x_{i,j} - x_{i,j+1}|
 ```
 
@@ -84,8 +84,8 @@ I'm actually happy with these wahahahaha
 GANs generate realistic images by learning to model the distribution of images in a training dataset. Briefly, a GAN consists of a generator which learns the data distribution of an image dataset and a
 discriminator which learns to predict probabilities of samples coming from the training dataset or from G.
 
-The generator learns to map a latent space $z \tilde p_z(z)$ into a distribution $G(z)$ that matches the real
-data distribution 
+While learning the generator's distribution $p_g$, the generator learns to map input noise variable $p_z(z)$ to the data space using the generator's mapping function 
+$G(z;\theta_g)$
 
 ## Demo Outputs
 These images are taken at some time points throughout the training process
