@@ -161,5 +161,5 @@ No. epochs: 3
 ### Training Process Summary
 Same as GAN
 
-### Demo Ouptuts
+### Demo Outputs
 
