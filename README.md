@@ -162,4 +162,5 @@ No. epochs: 3
 Same as GAN
 
 ### Demo Outputs
+As shown by the model outputs, my implementation of StyleGAN definitely still needs further tuning. While it learns distributions much faster compared to my GAN, it is also very vulnerable to mode collapse despite the low learning rates
 
