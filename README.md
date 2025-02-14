@@ -85,7 +85,7 @@ GANs generate realistic images by learning to model the distribution of images i
 discriminator which learns to predict probabilities of samples coming from the training dataset or from G.
 
 While learning the generator's distribution $p_g$, the generator learns to map input noise variable $p_z(z)$ to the data space using the generator's mapping function 
-$G(z;\theta_g)$. $theta_g$ represents the generator's parameters. The discriminator's function is given by $D(x;\theta_d)$ that outputs a scalar. $D(x)$ represents the probability that a sample $x$ came from
+$G(z;\theta_g)$. $\theta_g$ represents the generator's parameters. The discriminator's function is given by $D(x;\theta_d)$ that outputs a scalar. $D(x)$ represents the probability that a sample $x$ came from
 the training data instead of $G$. $D$ is trained to maximise the probability of assigning the correct labels to all samples. Simultaneously, $G$ is trained to minimise $log(1-D(G(z)))$.
 
 ### Loss Objective
@@ -94,7 +94,14 @@ The authors framed the optimisation objective as a two-player minimax game with 
 ```math
 \min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}(x)} [\log D(x)] + \mathbb{E}_{z \sim p_z(z)} [\log(1 - D(G(z)))]
 ```
+where
+- $D(x)$ represents the discriminator's estimate of the probability of $x$ belonging to the training set
+- $G(z)$ is the generator's mapping of a latent noise $z$ to the data space
+- $p_{\text{data}}(x)$ is the true distribution of real data
+- $p_z(z)$ is the prior distribution of the input noise
 
+### Training Procedure Summary
+Because i
 ## Demo Outputs
 These images are taken at some time points throughout the training process
 ![Intermediate Outputs](images/gan.png)
