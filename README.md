@@ -131,4 +131,3 @@ These images are taken at some time points throughout the training process
 
 ## StyleGAN
 StyleGAN is an extension of GAN. 
- 
