@@ -136,7 +136,10 @@ To improve results, I think that label smoothing, other loss functions, regulari
 
 ## StyleGAN
 The basic building block in StyleGAN is a sequence of CNN layer->Noise injection->AdaIN layer
-![stylegan_diagram](images/stylegan_diagram.png)
+<p align="center">
+    <img src="images/stylegan_diagram.png" alt="StyleGAN Diagram" width="400">
+</p>
+
 
 StyleGAN is an extension of GAN. Its novelty lies in the new architecture the authors proposed for the generator:
 1. Non-linear Mapping Network $f:Z \rightarrow W$ which maps a latent code $z$ in the input space to $w \in W$ with the same dimensions. The main purpose of the Mapping Network is to disentangle latent features, meaning that attributes of the latent space (e.g. hair feature, glasses features) are more cleanly separated so that each feature can be independently tuned.
