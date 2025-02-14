@@ -167,6 +167,7 @@ Same as GAN
 
 ### Demo Outputs
 As shown by the model outputs, my implementation of StyleGAN definitely still needs further tuning. While it learns distributions much faster compared to my GAN, it is also very vulnerable to mode collapse despite the low learning rates.
+The generator seems to almost converge to the optimal solution, but it collapses at the third epoch.
 ![stylegan_e1](images/stylegan_e1.png)
 ![stylegan_e2](images/stylegan_e2.png)
 ![stylegan_e3](images/stylegan_e3.png)
