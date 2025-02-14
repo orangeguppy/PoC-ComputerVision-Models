@@ -78,18 +78,17 @@ I'm actually happy with these wahahahaha
 ![Lilypads with Monet's style](images/style_transfer_3.png)
 ![Lilypads with Monet's style](images/style_transfer_2.png)
 
-
-
 ## CLIP
 
 ## GAN
-GANs generate realistic images by learning to model the distribution of images in a training dataset. Briefly, a GAN consists of a generator which generates 
-images and a discriminator which aims to distinguish real from fake images. The generator learns to map a latent space $z \tilde p_z(z)$ into a distribution $G(z)$ that matches the real
+GANs generate realistic images by learning to model the distribution of images in a training dataset. Briefly, a GAN consists of a generator which learns the data distribution of an image dataset and a
+discriminator which learns to predict probabilities of samples coming from the training dataset or from G.
+
+The generator learns to map a latent space $z \tilde p_z(z)$ into a distribution $G(z)$ that matches the real
 data distribution 
 
 ## Demo Outputs
 These images are taken at some time points throughout the training process
 ![Intermediate Outputs](images/gan.png)
-Best output at Epoch 45
 ![Final Output](images/final_gan.png)
 ## StyleGAN
