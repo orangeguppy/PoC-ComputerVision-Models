@@ -157,3 +157,9 @@ Batch size: 64
 LR (Generator), LR (Discriminator) = 0.00002, 0.00001
 
 No. epochs: 3
+
+### Training Process Summary
+Same as GAN
+
+### Demo Ouptuts
+
