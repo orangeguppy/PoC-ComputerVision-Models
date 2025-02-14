@@ -79,6 +79,7 @@ I'm actually happy with these wahahahaha
 ![Lilypads with Monet's style](images/style_transfer_2.png)
 
 ## CLIP
+(code works, but still cleaning code and writing is still in progress)
 
 ## GAN
 GANs generate realistic images by learning to model the distribution of images in a training dataset. Briefly, a GAN consists of a generator which learns the data distribution of an image dataset and a
