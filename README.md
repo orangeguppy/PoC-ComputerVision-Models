@@ -57,7 +57,7 @@ where $w_l$ are tunable weighting factors for each layer's contribution
 #### Total Variation Loss $L_{\text{tv}}$
 I chose to include TV loss to reduce the noise in the output image. 
 
-```math
+```math    
 L_{\text{tv}} = \sum_{i,j}  |x_{i,j} - x_{i+1,j}| + |x_{i,j} - x_{i,j+1}|
 ```
 
@@ -72,16 +72,40 @@ $\alpha$: 1e3, $\beta$: 5e6, $\lambda_{tv}$: 1e-6
 3) Compute the loss (defined earlier) and backpropagate.
 4) After training, denormalise the images and permute tensor dimensions for viewing with MatPlotLib.
 
-## Demo Outputs
+### Demo Outputs
 I'm actually happy with these wahahahaha
 ![Lilypads with Monet's style](images/style_transfer_1.png)
 ![Lilypads with Monet's style](images/style_transfer_3.png)
 ![Lilypads with Monet's style](images/style_transfer_2.png)
 
-
-
 ## CLIP
 
 ## GAN
+GANs generate realistic images by learning to model the distribution of images in a training dataset. Briefly, a GAN consists of a generator which learns the data distribution of an image dataset and a
+discriminator which learns to predict probabilities of samples coming from the training dataset or from G.
 
+While learning the generator's distribution $p_g$, the generator learns to map input noise variable $p_z(z)$ to the data space using the generator's mapping function 
+$G(z;\theta_g)$. $\theta_g$ represents the generator's parameters. The discriminator's function is given by $D(x;\theta_d)$ that outputs a scalar. $D(x)$ represents the probability that a sample $x$ came from
+the training data instead of $G$. $D$ is trained to maximise the probability of assigning the correct labels to all samples. Simultaneously, $G$ is trained to minimise $log(1-D(G(z)))$.
+
+### Loss Objective
+The authors framed the optimisation objective as a two-player minimax game with value function $V(G,D)$
+
+```math
+\min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}(x)} [\log D(x)] + \mathbb{E}_{z \sim p_z(z)} [\log(1 - D(G(z)))]
+```
+where
+- $D(x)$ represents the discriminator's estimate of the probability of $x$ belonging to the training set
+- $G(z)$ is the generator's mapping of a latent noise $z$ to the data space
+- $p_{\text{data}}(x)$ is the true distribution of real data
+- $p_z(z)$ is the prior distribution of the input noise
+
+### Training Procedure Summary
+In practice, the discriminator and generator are trained iteratively. D cannot be immediately optimised to completion, because it would cause overfitting. Also, if $D$ performs too well initially, it will
+be difficult for $G$ to learn effectively due to small gradients. For instance, if $D$ is a perfect classifier (assigns 1 for real, 0 for fake), then $log(1−D(G(z)))≈log(1−0)=log1=0$. To improve gradients for $G$, instead of training $G$ to minimise $log(1 − D(G(z)))$, we train it to maximise $log D(G(z))$. 
+
+## Demo Outputs
+These images are taken at some time points throughout the training process
+![Intermediate Outputs](images/gan.png)
+![Final Output](images/final_gan.png)
 ## StyleGAN
