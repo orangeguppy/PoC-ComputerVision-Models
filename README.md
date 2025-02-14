@@ -126,9 +126,13 @@ Repeat per epoch:
    - Compute $G$'s loss, backprop and update $G$
 
 ## Demo Outputs
-These images are taken at some time points throughout the training process
+These images are taken at some time points throughout the training process. It is also interesting to see that the generator generates "1"s more commonly than other numbers. I think this might be a minor form of mode collapse,
+where the generator generates more "1"s because its "1"s consistently fool the discriminator
 ![Intermediate Outputs](images/gan.png)
 ![Final Output](images/final_gan.png)
+
+### Future Work
+To improve results, I think that label smoothing, other loss functions, regularisation, and further hyperparameter tuning can be explored.
 
 ## StyleGAN
 The basic building block in StyleGAN is a sequence of CNN layer->Noise injection->AdaIN layer
@@ -162,5 +166,5 @@ No. epochs: 3
 Same as GAN
 
 ### Demo Outputs
-As shown by the model outputs, my implementation of StyleGAN definitely still needs further tuning. While it learns distributions much faster compared to my GAN, it is also very vulnerable to mode collapse despite the low learning rates
+As shown by the model outputs, my implementation of StyleGAN definitely still needs further tuning. While it learns distributions much faster compared to my GAN, it is also very vulnerable to mode collapse despite the low learning rates.
 
