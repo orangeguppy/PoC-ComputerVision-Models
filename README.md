@@ -149,6 +149,8 @@ Latent dim: 256
 
 No. channels (feature maps in generator): [256, 128, 64, 32, 1]
 
+No. layers in Mapping Network: 8
+
 Batch size: 64
 
 LR (Generator), LR (Discriminator) = 0.00002, 0.00001
