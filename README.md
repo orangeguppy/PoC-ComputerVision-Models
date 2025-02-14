@@ -1,4 +1,4 @@
-# PoC ComputerVision Models
+  # PoC ComputerVision Models
 ## Neural Style Transfer
 Neural Style Transfer is a deep learning technique that applies the style of an image to the content of another (e.g. in this repo, Monet's painting style to a picture of some lilypads). Style Transfer outputs can be viewed under the 'Demo Outputs' section.
 ### Model Architecture
@@ -134,5 +134,5 @@ StyleGAN is an extension of GAN. It's novelty lies in the new architecture the a
 1. Non-linear Mapping Network $f:Z \rightarrow W$ which maps a latent code $z$ in the input space to $w \in W$ with the same dimensions. The main purpose of the Mapping Network is to disentangle latent features, meaning that attributes of the latent space (e.g. hair feature, glasses features) are more cleanly separated so that each feature can be independently tuned.
 2. Then, through "A" (in diagram), which are learned affine transformations (implemented as single linear layers), $w$ is transformed into parameters $y=(y_s, y_b)$,  used by Adaptive Instance Normalisation (AdaIN) layers to control the strength of features at each layer. AdaIN layers are applied to CNN feature maps after CNN layers (see original diagram from paper).
 ```math
-AdaIN(x_i, y) = y_{s,i}\frac{x_i − \mu(x_i)}{\sigma(x_i)}+y_{b,i},
+AdaIN(x_i, y) = y_{s,i}\frac{x_i − \mu(x_i)}{\sigma(x_i)}+y_{b,i}
 ```
