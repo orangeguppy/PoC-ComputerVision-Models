@@ -7,7 +7,7 @@ class VGG19Model(nn.Module):
     def __init__(self):
         super(VGG19Model, self).__init__()
         # Use a VGG-19 backbone like in the original implementation as a feature extractor
-        self.backbone = torchvision.models.vgg19(pretrained=True).features.eval() # Only use the feature extractor, exclude non-classification layers
+        self.backbone = torchvision.models.vgg19(pretrained=True).features.eval() # Only use the feature extractor, exclude classification layers
         print(self.backbone)
 
         # Avoid accidentally training the model

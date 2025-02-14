@@ -79,6 +79,7 @@ I'm actually happy with these wahahahaha
 ![Lilypads with Monet's style](images/style_transfer_2.png)
 
 ## CLIP
+(code works, but still cleaning code and writing is still in progress)
 
 ## GAN
 GANs generate realistic images by learning to model the distribution of images in a training dataset. Briefly, a GAN consists of a generator which learns the data distribution of an image dataset and a
@@ -125,9 +126,13 @@ Repeat per epoch:
    - Compute $G$'s loss, backprop and update $G$
 
 ## Demo Outputs
-These images are taken at some time points throughout the training process
+These images are taken at some time points throughout the training process. It is also interesting to see that the generator generates "1"s more commonly than other numbers. I think this might be a minor form of mode collapse,
+where the generator generates more "1"s because its "1"s consistently fool the discriminator
 ![Intermediate Outputs](images/gan.png)
 ![Final Output](images/final_gan.png)
+
+### Future Work
+To improve results, I think that label smoothing, other loss functions, regularisation, and further hyperparameter tuning can be explored.
 
 ## StyleGAN
 The basic building block in StyleGAN is a sequence of CNN layer->Noise injection->AdaIN layer
@@ -156,3 +161,12 @@ Batch size: 64
 LR (Generator), LR (Discriminator) = 0.00002, 0.00001
 
 No. epochs: 3
+
+### Training Process Summary
+Same as GAN
+
+### Demo Outputs
+As shown by the model outputs, my implementation of StyleGAN definitely still needs further tuning. While it learns distributions much faster compared to my GAN, it is also very vulnerable to mode collapse despite the low learning rates.
+![stylegan_e1](images/stylegan_e1.png)
+![stylegan_e2](images/stylegan_e2.png)
+![stylegan_e3](images/stylegan_e3.png)
