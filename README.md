@@ -141,3 +141,7 @@ AdaIN(x_i, y) = y_{s,i}\frac{x_i − \mu(x_i)}{\sigma(x_i)}+y_{b,i}
 where each feature map $x_i$ is separately normalised
 
 3. Noise injection is done via "B", which applies per-channel scaling factors to the noise input
+4. Noise injection introduces random variation, while AdaIN provides semantic-level control
+5. Finally, in the original StyleGAN, images are generated progressively by starting from low-resolution layers
+
+### Hyperparameters
